@@ -22,16 +22,115 @@ Este proyecto es una aplicación web construida con **Python, Django y PostgreSQ
 - [Python 3.x](https://www.python.org/)
 - [Django 4.x](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Docker](https://www.docker.com/)
 - HTML5, CSS3 y JavaScript
 
 ---
 
-## 🐳 Entorno de desarrollo con Docker
+## 🧪 Instalación local (sin Docker)
 
-> Se incluye configuración con Docker para facilitar la ejecución local y futura implementación en producción.
+### 1. Clona el repositorio
 
-```bash
-# Levantar el entorno de desarrollo
-docker-compose up --build
+```zsh
+    git clone https://github.com/carloschxble/showcontrol.git
+    cd showcontrol
+```
+### 2. Crea y activa un entorno virtual
 
+```zsh
+    python3 -m venv env # "python3" en Mac/Linux, "python" en Windows
+    source env/bin/activate  # En Mac/Linux
+```
+
+### 3. Instala dependencias
+
+```zsh
+    pip3 install -r requirements.txt # "pip3" en Mac/Linux, "pip" en Windows
+```
+
+### 4. Instala dependencias
+
+```python
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'showcontrol',
+        'USER': '*****',
+        'PASSWORD': '*****',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        }
+    }
+
+    # Pedir las credenciales de la db al administrador
+```
+
+### 5. Aplica las migraciones
+
+```zsh
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+```
+
+### 6. Crea un superusuario (opcional)
+
+```zsh
+    python3 manage.py createsuperuser
+```
+
+### 7. Corre el servidor
+
+```zsh
+    python3 manage.py runserver
+```
+    Accede a la app en: http://127.0.0.1:8000/
+    Panel admin: http://127.0.0.1:8000/admin/
+
+---
+
+## 📂 Estructura básica del proyecto
+showcontrol/
+├── core/                  # App principal
+│   ├── models.py          # Modelos: Emprendedor, Venta, etc.
+│   ├── views.py
+│   └── ...
+├── showcontrol/           # Configuración general del proyecto
+│   ├── settings.py
+│   └── urls.py
+├── manage.py
+├── requirements.txt
+└── README.md
+
+---
+
+## 🐘 Comandos útiles con PostgreSQL
+
+### 1. Entrar al cliente psql
+
+```zsh
+    psql -U nombre_de_usuario -d showcontrol_db
+```
+### 2. Ver las tablas
+
+```zsh
+    \dt
+```
+
+### 3. Salir del cliente
+
+```zsh
+    \q
+```
+
+## 🐳 Entorno de desarrollo con Docker (próximamente)
+
+🚧 Esta sección está en construcción. A futuro se incluirá configuración con Docker para facilitar la ejecución local y la implementación en producción.
+
+## 🔜 Próximamente
+
+- Integración de Docker
+- Interfaz de usuario para reportes y consultas
+- Tests automatizados
+- Panel personalizado para emprendedores
+
+## 📄 Licencia
+Este proyecto se encuentra en desarrollo. La licencia será definida una vez se concluya la versión estable.
