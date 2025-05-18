@@ -107,7 +107,7 @@ showcontrol/
 ### 1. Entrar al cliente psql
 
 ```zsh
-    psql -U nombre_de_usuario -d showcontrol_db
+    psql -U nombre_de_usuario -d nombre_de_la_base_de_datos
 ```
 ### 2. Ver las tablas
 
