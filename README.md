@@ -53,7 +53,7 @@ Este proyecto es una aplicación web construida con **Python, Django y PostgreSQ
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'showcontrol',
+        'NAME': '*****',
         'USER': '*****',
         'PASSWORD': '*****',
         'HOST': 'localhost',
