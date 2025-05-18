@@ -47,7 +47,7 @@ Este proyecto es una aplicación web construida con **Python, Django y PostgreSQ
     pip3 install -r requirements.txt # "pip3" en Mac/Linux, "pip" en Windows
 ```
 
-### 4. Instala dependencias
+### 4. Configura la base de datos PostgreSQL
 
 ```python
     DATABASES = {
