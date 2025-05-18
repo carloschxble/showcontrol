@@ -1,0 +1,67 @@
+/*  ============================
+    RESET & BASE STYLES AVANZADO
+    ============================ */
+
+/* Box-sizing universal */
+/* Eliminar márgenes/paddings base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML base y antialiasing para fuentes */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base para body */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eaeaea;
+}
+
+/* Remover decoración y color de enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Botones sin borde ni fondo */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Imágenes: escala máxima y display block para evitar espacios */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Inputs, buttons, selects, textarea: heredar tipografía */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* liminar estilos de tabla */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Eliminar estilos predeterminados de listas */
+ul, ol {
+    list-style: none;
+}
